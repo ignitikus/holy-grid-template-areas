@@ -1,6 +1,14 @@
 #app {
   display: grid;
-  height: 300px;
+  height: 800px;
+  grid-template-areas: 
+  "header header header"
+  "nav content adds"
+  "nav content2 adds"
+  "footer footer footer"
+  ;
+
+  grid-template-columns: 0.5fr 3fr 1fr;
 }
 
 #header, #footer {
@@ -8,11 +16,11 @@
 }
 
 #header {
-  
+  grid-area: header;
 }
 
 #footer {
-  
+  grid-area: footer;
 }
 
 #main {
@@ -21,16 +29,20 @@
 
 #article-1 {
   background-color: lightcoral;
+  grid-area: content;
 }
 
 #article-2 {
   background-color: violet;
+  grid-area: content2;
 }
 
 #nav {
   background-color: cornflowerblue;
+  grid-area: nav;
 }
 
 #ad-area {
   background-color: cornflowerblue;
+  grid-area: adds;
 }
